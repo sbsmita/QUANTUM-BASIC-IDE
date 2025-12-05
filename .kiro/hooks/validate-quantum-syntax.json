@@ -1,0 +1,13 @@
+{
+  "name": "Validate Quantum BASIC Syntax",
+  "description": "Check Quantum BASIC code for syntax errors and quantum operation validity",
+  "trigger": {
+    "type": "onFileSave",
+    "filePattern": "**/*.qb"
+  },
+  "action": {
+    "type": "sendMessage",
+    "message": "Validate the Quantum BASIC code in {{filePath}} according to the quantum-basic-standards steering doc. Check: 1) Line numbers are multiples of 10, 2) QINIT is called before quantum operations, 3) Qubit indices are valid, 4) All statements are supported"
+  },
+  "enabled": true
+}

@@ -1,0 +1,12 @@
+10 REM Quantum NOT Gate Demo
+20 REM Initialize quantum system
+30 QINIT 1
+40 PRINT "Initial: |0>"
+50 REM Apply quantum operations
+60 QNOT 0
+70 PRINT "Applied X Gate"
+80 REM Measure and process results
+90 MEASURE 0
+100 PRINT "Result: "; QRESULT
+110 IF QRESULT = 1 THEN PRINT "Success! Flipped to |1>"
+120 END

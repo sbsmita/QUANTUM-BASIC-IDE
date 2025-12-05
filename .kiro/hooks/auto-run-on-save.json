@@ -1,0 +1,13 @@
+{
+  "name": "Auto-run Quantum BASIC on Save",
+  "description": "Automatically execute Quantum BASIC programs when .qb files are saved",
+  "trigger": {
+    "type": "onFileSave",
+    "filePattern": "**/*.qb"
+  },
+  "action": {
+    "type": "sendMessage",
+    "message": "Run the Quantum BASIC program in {{filePath}} and show the output with quantum circuit visualization"
+  },
+  "enabled": true
+}

@@ -1,0 +1,13 @@
+10 REM Superposition Demonstration
+20 REM Initialize quantum system
+30 QINIT 1
+40 PRINT "Initial State: |0>"
+50 REM Apply quantum operations
+60 HADAMARD 0
+70 PRINT "After Hadamard: Superposition!"
+80 PRINT "State is now |0> + |1>"
+90 REM Measure and process results
+100 PRINT "Measuring..."
+110 MEASURE 0
+120 PRINT "Collapsed to: "; QRESULT
+130 END

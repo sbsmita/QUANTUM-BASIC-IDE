@@ -1,0 +1,10 @@
+10 REM Quantum Coin Flip
+20 REM Initialize quantum system
+30 QINIT 1
+40 REM Apply quantum operations
+50 HADAMARD 0
+60 REM Measure and process results
+70 MEASURE 0
+80 IF QRESULT = 0 THEN PRINT "HEADS"
+90 IF QRESULT = 1 THEN PRINT "TAILS"
+100 END

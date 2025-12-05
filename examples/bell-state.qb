@@ -1,0 +1,16 @@
+10 REM Bell State - Quantum Entanglement Demo
+20 REM Initialize quantum system
+30 QINIT 2
+40 REM Apply quantum operations
+50 HADAMARD 0
+60 CNOT 0,1
+70 PRINT "Bell State Created!"
+80 REM Measure and process results
+90 MEASURE 0
+100 LET FIRST = QRESULT
+110 PRINT "First Qubit: "; FIRST
+120 MEASURE 1
+130 LET SECOND = QRESULT
+140 PRINT "Second Qubit: "; SECOND
+150 IF FIRST = SECOND THEN PRINT "Entangled! Both match."
+160 END

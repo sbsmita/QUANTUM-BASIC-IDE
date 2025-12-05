@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "quantum-simulator": {
+      "command": "node",
+      "args": ["mcp-server/quantum-mcp.js"],
+      "disabled": false,
+      "autoApprove": ["simulate_circuit", "get_quantum_state"]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+10 REM Quantum Random Number Generator (0-7)
+20 REM Initialize quantum system
+30 QINIT 3
+40 REM Apply quantum operations
+50 HADAMARD 0
+60 HADAMARD 1
+70 HADAMARD 2
+80 REM Measure and process results
+90 MEASURE 0
+100 LET A = QRESULT
+110 MEASURE 1
+120 LET B = QRESULT
+130 MEASURE 2
+140 LET C = QRESULT
+150 LET RESULT = A * 4 + B * 2 + C
+160 PRINT "Quantum Random Number: "; RESULT
+170 END

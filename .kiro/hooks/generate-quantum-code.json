@@ -1,0 +1,13 @@
+{
+  "name": "Generate Quantum Algorithm",
+  "description": "Generate Quantum BASIC code for common quantum algorithms",
+  "trigger": {
+    "type": "manual",
+    "buttonLabel": "🎯 Generate Quantum Algorithm"
+  },
+  "action": {
+    "type": "sendMessage",
+    "message": "Use the MCP quantum-simulator tool 'generate_quantum_program' to generate a Quantum BASIC program. Ask me which algorithm I want: coin_flip, bell_state, random_number, deutsch, or grover_2qubit"
+  },
+  "enabled": true
+}
