@@ -182,11 +182,21 @@
 }
 
 @media (max-width: 768px) {
+  .app {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
   .main-container {
     grid-template-columns: 1fr;
+    overflow: visible;
   }
   
   .example-buttons {
     flex-direction: column;
+  }
+  
+  .right-panel {
+    overflow: visible;
   }
 }
