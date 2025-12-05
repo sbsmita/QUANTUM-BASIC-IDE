@@ -1,13 +1,21 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { BasicInterpreter } from './interpreter.js';
 import { QuantumEngine } from './quantum.js';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
+
+// Serve static files from frontend build
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
 app.post('/execute', async (req, res) => {
   try {
@@ -31,6 +39,11 @@ app.post('/execute', async (req, res) => {
       output: [`ERROR: ${error.message}`]
     });
   }
+});
+
+// Serve index.html for all other routes (SPA support)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
 
 app.listen(PORT, () => {
